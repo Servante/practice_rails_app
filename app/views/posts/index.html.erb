@@ -1,11 +1,15 @@
+<div class="header">
+</div>
 <div class="section">
   <h1 class="page-title">Posts</h1>
-  <ul class="list-index">
+  <div class="list-index">
     <% @post.each do |post| %>
-      <div class="card">
-        <li><%= link_to post.title, post %></li>
-      </div>
+      <ul>
+        <div class="card">
+          <li><%= link_to post.title, post %></li>
+        </div>
+      </ul>
     <% end %>  
-  </ul>
+  </div>
 </div>
 <footer></footer>
