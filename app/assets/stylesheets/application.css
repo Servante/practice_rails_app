@@ -23,6 +23,7 @@
   flex-direction: column;
   /* align-items: center;
   justify-content: center; */
+  color: yellow;
  }
 
  /* .body {
@@ -53,7 +54,10 @@
   flex-direction: column;
 } */
 
-
+.new-post-link a {
+  font-size: 40px;
+  color: yellow;
+}
 
 .card {
   border: 1px solid yellow;
