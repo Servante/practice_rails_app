@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @user_options = User.all.map{|u| [u.username, u.id]}
     @post = Post.new
   end
 

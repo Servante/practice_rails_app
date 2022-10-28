@@ -1,5 +1,15 @@
 <%= form_with model: post do |form| %>
   <div>
+    <%= select_tag(:author_id, options_for_select(@user_options)) %>
+  </div>
+  <div>
+    <%= form.select(:author_id, @user_options)%>
+  </div>
+
+  <div>
+    <%= form.collection_check_boxes :user_id, User.order(:username), :id, :username %>
+  </div>
+  <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
     <%# post.errors.full_messages_for(:title).each do |message| %>

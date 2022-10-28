@@ -1,11 +1,16 @@
-<h1><%= @post.title %></h1>
+<div class="container">
+  <div class="show-post">
+    <h1><%= @post.title %></h1>
 
-<div><%= @post.body %></div>
+    <div><%= @post.body %></div>
+    <div><%= @post.user_id %></div>
 
-<ul>
-  <li><%= link_to "Edit", edit_post_path(@post) %></li>
-  <li><%= link_to "Destroy", post_path(@post), data: {
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure?"
-    } %></li>
-</ul>
+    <ul>
+      <li><%= link_to "Edit", edit_post_path(@post) %></li>
+      <li><%= link_to "Destroy", post_path(@post), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+        } %></li>
+    </ul>
+  </div>
+</div>
